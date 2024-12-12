@@ -1,24 +1,28 @@
 # Eventify
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
-
 ## Development server
 
-To start a local development server, run:
+Per avviare il server di sviluppo, eseguire:
 
 ```bash
 ng serve
 ```
 
+o
+
+```bash
+npm run start --open
+```
+
 ## Building
 
-To build the project run:
+Per buildare il progetto, eseguire:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Permetterrà di compilare il progetto e memorizzare gli artefatti di build nella directory `dist/`. Di default, la build di produzione ottimizza l'applicazione per le prestazioni e la velocità.
 
 ## Running unit tests
 
@@ -92,13 +96,14 @@ Eventify è un'applicazione web che consente agli utenti di:
 
 ## 🛠️ Tecnologie Utilizzate
 
-Angular per il frontend.
-Angular Router per la gestione della navigazione.
-RxJS per la gestione delle richieste asincrone.
-Bootstrap o Angular Material per il design.
-HTTP Client per comunicare con le API REST.
-JSON Server (per simulare un backend se non è disponibile un’API vera e propria).
-📂 Struttura dei Componenti
+- Angular per il frontend.
+- Angular Router per la gestione della navigazione.
+- RxJS per la gestione delle richieste asincrone.
+- Tailwind e DaisyUI per il design.
+- HTTP Client per comunicare con le API REST.
+- JSON Server (per simulare un backend se non è disponibile un’API vera e propria).
+
+## 📂 Struttura dei Componenti
 
 ```
 src/
@@ -138,11 +143,11 @@ src/
 
 ## 📝 Passaggi per lo Sviluppo
 
-Impostare il progetto Angular con ng new Eventify.
-Creare i componenti principali (Home, Event List, Event Detail, Login, ecc.).
-Configurare il routing per le varie pagine.
-Implementare i servizi per la gestione degli eventi e dell’autenticazione.
-Aggiungere la dashboard amministrativa e proteggere le rotte con AuthGuard.
-Integrare Bootstrap o Angular Material per un design moderno.
-Collegare il backend (fittizio con JSON Server o reale con API REST).
-Testare l’applicazione per verificare che tutte le funzionalità siano operative.
+- Impostare il progetto Angular con ng new Eventify.
+- Creare i componenti principali (Home, Event List, Event Detail, Login, ecc.).
+- Configurare il routing per le varie pagine.
+- Implementare i servizi per la gestione degli eventi e dell’autenticazione.
+- Aggiungere la dashboard amministrativa e proteggere le rotte con AuthGuard.
+- Integrare TailwindCSS e DaisyUI per un design moderno.
+- Collegare il backend
+- Testare l’applicazione per verificare che tutte le funzionalità siano operative.
