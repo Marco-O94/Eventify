@@ -24,14 +24,17 @@ export const routes: Routes = [
       import('./ui/pages/events/event-list/event-list.component').then(
         (m) => m.EventListComponent
       ),
+    children: [
+      {
+        path: ':id',
+        loadComponent: () =>
+          import('./ui/pages/events/event-detail/event-detail.component').then(
+            (m) => m.EventDetailComponent
+          ),
+      },
+    ],
   },
-  {
-    path: 'events/:id',
-    loadComponent: () =>
-      import('./ui/pages/events/event-detail/event-detail.component').then(
-        (m) => m.EventDetailComponent
-      ),
-  },
+
   {
     path: 'login',
     loadComponent: () =>
