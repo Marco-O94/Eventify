@@ -21,6 +21,7 @@
     "@ng-icons/core": "^29.10.0",
     "@ng-icons/heroicons": "^29.10.0",
     "rxjs": "~7.8.0",
+    "swiper": "^11.1.15",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },

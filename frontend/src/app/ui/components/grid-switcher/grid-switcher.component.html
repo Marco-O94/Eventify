@@ -1,0 +1,5 @@
+@if(gridMode() === 'grid') {
+<button (click)="switchMode('list')" class="btn btn-primary">List</button>
+} @else {
+<button (click)="switchMode('grid')" class="btn btn-primary">Grid</button>
+}
