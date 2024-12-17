@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-events',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './events.component.html',
   styleUrl: './events.component.scss',
 })

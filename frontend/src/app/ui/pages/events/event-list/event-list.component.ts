@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { Event } from '../../../../interfaces';
 import { EventCardComponent } from '../../../components/event-card/event-card.component';
 
 @Component({
@@ -8,4 +9,7 @@ import { EventCardComponent } from '../../../components/event-card/event-card.co
   templateUrl: './event-list.component.html',
   styleUrl: './event-list.component.scss',
 })
-export class EventListComponent {}
+export class EventListComponent {
+  constructor() {}
+  events = input<Event[]>();
+}
