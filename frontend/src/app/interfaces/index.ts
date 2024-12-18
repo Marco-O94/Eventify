@@ -7,15 +7,17 @@ export interface MenuItems {
 }
 
 export interface Event {
-  id: string;
+  id: number;
   title: string;
-  description: string;
-  date: Date;
-  time: string;
-  location: string;
-  price: number;
-  category: number;
-  image?: string;
+  content: string;
+  abstract: string;
+  categories?: (Category | undefined)[];
+}
+
+export interface Category {
+  id: number;
+  name: string;
+  icon: IconType;
 }
 
 export interface User {
@@ -27,7 +29,7 @@ export interface User {
 }
 
 export interface EventsFilters {
-  category?: number;
+  categories?: Category[];
   date?: Date;
   location?: string;
   title?: string;

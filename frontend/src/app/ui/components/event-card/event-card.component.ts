@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { EventProp } from '../../../models/event.model';
+import { Event } from '../../../interfaces';
 @Component({
   selector: 'app-event-card',
   imports: [],
@@ -7,15 +7,7 @@ import { EventProp } from '../../../models/event.model';
   styleUrl: './event-card.component.scss',
 })
 export class EventCardComponent {
-  @Input() event?: EventProp;
+  @Input() event?: Event;
   @Input() cardLayout: 'vertical' | 'horizontal' = 'vertical';
   constructor() {}
-
-  get eventDate(): string {
-    return this.event?.date.toDateString() ?? '';
-  }
-
-  get eventTime(): string {
-    return this.event?.time ?? '';
-  }
 }

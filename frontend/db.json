@@ -4,7 +4,7 @@
       "title": "Tech Summit 2024",
       "abstract": "Una conferenza annuale che esplora le ultime innovazioni tecnologiche.",
       "content": "Il Tech Summit 2024 riunisce esperti di tutto il mondo per discutere di intelligenza artificiale, blockchain e realtà aumentata. Partecipa a keynote, workshop e sessioni di networking uniche nel loro genere.",
-      "category": [
+      "categories": [
         1,
         2,
         3
@@ -14,7 +14,7 @@
       "title": "Palermo Fitness Challenge",
       "abstract": "Una competizione sportiva dedicata agli appassionati di fitness e bodybuilding.",
       "content": "Atleti provenienti da tutta Italia si sfideranno in prove di resistenza, forza e agilità. Un evento imperdibile per chi ama lo sport e la competizione.",
-      "category": [
+      "categories": [
         4,
         5,
         6
@@ -24,7 +24,7 @@
       "title": "Sagra del Pistacchio di Bronte",
       "abstract": "La celebre sagra che celebra il pistacchio DOP di Bronte.",
       "content": "Tre giorni di degustazioni, mercatini, e showcooking per celebrare il famoso oro verde della Sicilia. Scopri il gusto autentico di questo frutto unico.",
-      "category": [
+      "categories": [
         7,
         8,
         9
@@ -34,7 +34,7 @@
       "title": "Corso di Fotografia Creativa",
       "abstract": "Un workshop per imparare tecniche avanzate di fotografia.",
       "content": "Dedicato sia ai principianti che ai professionisti, questo corso insegna a catturare immagini straordinarie attraverso l'uso creativo della luce e della composizione.",
-      "category": [
+      "categories": [
         10,
         11,
         12
@@ -44,7 +44,7 @@
       "title": "Concerto Live: Jazz sotto le Stelle",
       "abstract": "Una serata magica di jazz dal vivo sotto il cielo estivo.",
       "content": "Goditi una performance di musicisti jazz di fama internazionale in una suggestiva location all'aperto. Un evento per rilassarsi e lasciarsi trasportare dalla musica.",
-      "category": [
+      "categories": [
         13,
         14,
         15
@@ -54,7 +54,7 @@
       "title": "Startup Weekend Palermo",
       "abstract": "Un evento di 54 ore per trasformare un'idea in una startup.",
       "content": "Partecipa a un weekend intensivo di brainstorming, sviluppo e pitch. Ricevi supporto da mentor esperti e fai crescere la tua idea imprenditoriale.",
-      "category": [
+      "categories": [
         16,
         17,
         18
@@ -64,19 +64,23 @@
   "categories": [
     {
       "id": 1,
-      "name": "tecnologia"
+      "name": "tecnologia",
+      "icon": "code"
     },
     {
       "id": 2,
-      "name": "conferenza"
+      "name": "conferenza",
+      "icon": "mic"
     },
     {
       "id": 3,
-      "name": "innovazione"
+      "name": "innovazione",
+      "icon": "lightbulb"
     },
     {
       "id": 4,
-      "name": "sport"
+      "name": "sport",
+      "icon": "dumbbell"
     },
     {
       "id": 5,

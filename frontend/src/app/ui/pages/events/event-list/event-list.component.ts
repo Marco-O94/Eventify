@@ -1,20 +1,39 @@
 import { Component, input, model } from '@angular/core';
-import { Event } from '../../../../interfaces';
+import { Category, Event, EventsFilters } from '../../../../interfaces';
 import { EventCardComponent } from '../../../components/event-card/event-card.component';
 import { GridSwitcherComponent } from '../../../components/grid-switcher/grid-switcher.component';
-import { EventTableCardComponent } from '../../../components/event-table/event-table-card.component';
+import { ApiService } from '../../../../services/api.service';
+import { map, Observable, switchMap } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-event-list',
   standalone: true,
-  imports: [EventCardComponent, GridSwitcherComponent, EventTableCardComponent],
+  imports: [EventCardComponent, GridSwitcherComponent, CommonModule],
   templateUrl: './event-list.component.html',
   styleUrl: './event-list.component.scss',
 })
 export class EventListComponent {
-  constructor() {}
-  // Input è un modo per definire una variabile che può essere passata da un altro componente parent ma quest'ultimo non si aggiorna
-  events = input<Event[]>();
-
+  $events: Observable<Event[]> = new Observable();
+  $categories: Observable<Category[]> = new Observable();
+  filters: EventsFilters = {};
   gridMode: 'grid' | 'list' = 'list';
+  constructor(public api: ApiService) {
+    this.$categories = this.api.getCategories();
+    this.$events = this.api.getEvents(this.filters).pipe(
+      switchMap((events) =>
+        this.$categories.pipe(
+          map((categories) => {
+            const updatedEvents = events.map((event) => ({
+              ...event,
+              categories: event.categories?.map((categoryId: unknown) =>
+                categories.find((c) => c.id === categoryId)
+              ),
+            }));
+            return updatedEvents;
+          })
+        )
+      )
+    );
+  }
 }

@@ -1,16 +1,37 @@
-<div class="card bg-base-100 shadow-xl">
+@if(cardLayout == 'horizontal') {
+<div class="card card-side bg-base-100 shadow-xl flex flex-row items-center max-h-40">
   <figure>
-    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+    <img src="https://picsum.photos/1920/1080.webp" alt="Shoes" class="card-image" />
   </figure>
   <div class="card-body">
     <h2 class="card-title">
-      Shoes!
+      {{event?.title}}
       <div class="badge badge-secondary">NEW</div>
     </h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <p>{{event?.abstract}}</p>
     <div class="card-actions justify-end">
-      <div class="badge badge-outline">Fashion</div>
-      <div class="badge badge-outline">Products</div>
+      @for(category of event?.categories; track category?.id) {
+      <div class="badge badge-outline">{{category?.name }}</div>
+      }
     </div>
   </div>
 </div>
+} @else {
+<div class="card bg-base-100 shadow-xl card-vertical">
+  <figure>
+    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+  </figure>
+  <div class="card-body h-100">
+    <h2 class="card-title">
+      {{event?.title}}
+      <div class="badge badge-secondary">NEW</div>
+    </h2>
+    <p>{{event?.abstract}}</p>
+    <div class="card-actions justify-end">
+      @for(category of event?.categories; track category?.id) {
+      <div class="badge badge-outline">{{category?.name}}</div>
+      }
+    </div>
+  </div>
+</div>
+}
