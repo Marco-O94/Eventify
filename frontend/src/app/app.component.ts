@@ -3,10 +3,11 @@ import { provideIcons } from '@ng-icons/core';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SidebarComponent } from './ui/layout/sidebar/sidebar.component';
+import { LoaderComponent } from './ui/components/loader/loader.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, SidebarComponent],
+  imports: [RouterOutlet, SidebarComponent, LoaderComponent],
   providers: [
     provideIcons({ home: heroHomeSolid, calendar: heroCalendarSolid }),
   ],

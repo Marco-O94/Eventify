@@ -1,1 +1,10 @@
-<p>event-detail works!</p>
+<div class="hero bg-base-200">
+  <div class="hero-content flex-col lg:flex-row">
+    <div>
+      <h1 class="text-5xl font-bold">{{($event | async)?.title}}</h1>
+      <p class="py-6">
+        {{($event | async)?.content}}
+      </p>
+    </div>
+  </div>
+</div>

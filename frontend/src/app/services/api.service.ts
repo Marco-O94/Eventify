@@ -15,4 +15,7 @@ export class ApiService {
   getCategories() {
     return this.http.get<Category[]>(`${environment.apiUrl}/categories`);
   }
+  getEvent(id: string) {
+    return this.http.get<Event>(`${environment.apiUrl}/events/${id}`);
+  }
 }

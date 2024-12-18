@@ -26,15 +26,14 @@ export class EventListComponent {
       // SwitchMap è un operatore che permette di cambiare l'Observable in base a un'altra sorgente di dati
       switchMap((events) =>
         this.$categories.pipe(
-          map((categories) => {
-            const updatedEvents = events.map((event) => ({
+          map((categories) =>
+            events.map((event) => ({
               ...event,
               categories: event.categories?.map((categoryId: unknown) =>
                 categories.find((c) => c.id === categoryId)
               ),
-            }));
-            return updatedEvents;
-          })
+            }))
+          )
         )
       )
     );
