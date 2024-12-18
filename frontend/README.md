@@ -1,5 +1,10 @@
 # Eventify
 
+## Guida Angular
+
+All'interno del progetto è presente una guida che spiega l'uso delle varie features di angular all'interno del progetto per una migliore comprensione.
+[Guida Angular](./Guida-angular.md)
+
 ## Development server
 
 Per avviare il server di sviluppo, eseguire:

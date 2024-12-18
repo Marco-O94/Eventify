@@ -3,14 +3,26 @@ import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import {
   heroCalendarDaysSolid,
   heroHomeSolid,
+  heroListBulletSolid,
 } from '@ng-icons/heroicons/solid';
+import {
+  featherCalendar,
+  featherGrid,
+  featherHome,
+  featherList,
+} from '@ng-icons/feather-icons';
 import { IconType } from '../../../types';
 
 @Component({
   selector: 'Icon',
   imports: [NgIconComponent],
   providers: [
-    provideIcons({ home: heroHomeSolid, calendar: heroCalendarDaysSolid }),
+    provideIcons({
+      home: featherHome,
+      calendar: featherCalendar,
+      list: featherList,
+      grid: featherGrid,
+    }),
   ],
   templateUrl: './icon.component.html',
   styleUrl: './icon.component.scss',

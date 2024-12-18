@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EventTableComponent } from './event-table.component';
+import { EventTableComponent } from './event-table-card.component';
 
 describe('EventTableComponent', () => {
   let component: EventTableComponent;
@@ -8,9 +8,8 @@ describe('EventTableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EventTableComponent]
-    })
-    .compileComponents();
+      imports: [EventTableComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(EventTableComponent);
     component = fixture.componentInstance;

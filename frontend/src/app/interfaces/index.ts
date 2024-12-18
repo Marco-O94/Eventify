@@ -14,7 +14,7 @@ export interface Event {
   time: string;
   location: string;
   price: number;
-  category: 'Musica' | 'Teatro' | 'Sport' | 'Conferenza' | 'Altro';
+  category: number;
   image?: string;
 }
 
@@ -24,4 +24,11 @@ export interface User {
   email: string;
   password: string;
   role: 'admin' | 'user';
+}
+
+export interface EventsFilters {
+  category?: number;
+  date?: Date;
+  location?: string;
+  title?: string;
 }

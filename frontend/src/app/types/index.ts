@@ -1,1 +1,1 @@
-export type IconType = 'home' | 'calendar';
+export type IconType = 'home' | 'calendar' | 'grid' | 'list';

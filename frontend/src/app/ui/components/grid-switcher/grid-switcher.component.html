@@ -1,5 +1,3 @@
-@if(gridMode() === 'grid') {
-<button (click)="switchMode('list')" class="btn btn-primary">List</button>
-} @else {
-<button (click)="switchMode('grid')" class="btn btn-primary">Grid</button>
-}
+<button (click)="switchMode(gridMode() == 'grid' ? 'list' : 'grid')" class="btn btn-ghost cursor-pointer">
+  <Icon [icon]="gridMode()" />
+</button>
