@@ -50,7 +50,12 @@ Per utilizzare HttpClient basterà chiamare il provider in app.config.ts e iniet
 
 ## Forms
 
-## 📚 Cos'è pipe in Angular?
+## Differenza tra RXJS e NGRX
+
+Rxjs gives you Observables. Ngrx gives you state management with actions and reducers.
+Rxjs fornisce degli Observables da utilizzare per la gestione degli eventi, mentre Ngrx fornisce state management tramite uno store con azioni e reducers.
+
+### 📚 Le Pipes in RXJS
 
 In Angular, pipe è un metodo utilizzato con gli Observable per trasformare i dati emessi da un Observable, applicando una serie di operatori. Gli operatori sono funzioni che permettono di manipolare il flusso di dati: ad esempio, puoi filtrare, trasformare o combinare gli elementi emessi dall'Observable.
 
@@ -63,7 +68,7 @@ myObservable.pipe(
 
 > Prendere in considerazione event-list.component.ts per un esempio di utilizzo.
 
-## 🔄 Cos'è switchMap e come funziona?
+### 🔄 SwitchMap - RxJS
 
 `switchMap` è uno degli operatori più potenti che puoi usare con un Observable. Serve per sostituire un Observable con un nuovo Observable basato sui valori emessi dal primo.
 
@@ -71,10 +76,10 @@ In pratica, prende ogni valore emesso dall'Observable originale e lo "scambia" c
 
 > Prendere in considerazione event-list.component.ts per un esempio di utilizzo.
 
-### 📝 Schema di switchMap
+#### 📝 Schema di switchMap
 
 ```
-Observable1 ----x----x----x--------->
+Observable ----x----x----x--------->
 
 switchMap(value => Observable2)
 
@@ -85,4 +90,4 @@ Result ---------o----o----o--------->
 
 Nel caso presentato in event-list.component.ts si usa switchMap perchè se categories dovesse rispondere dopo events, una volta che categories risponde, la risposta di events verrebbe sovrascritta da categories prendendo come base i vecchi dati ottenuti tramite la chiamata events.
 
-## 📚 Cos'è BehaviorSubject in Angular?
+### 📚 BehaviousSubject - RxJS

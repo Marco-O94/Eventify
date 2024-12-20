@@ -1,11 +1,20 @@
 import { Component } from '@angular/core';
-import { HeroSectionComponent } from '../../components/hero-section/hero-section.component';
+import { EventsCategoriesComponent } from '../../components/events-categories/events-categories.component';
+import { Category } from '../../../interfaces';
+import { ApiService } from '../../../services/api.service';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeroSectionComponent],
+  imports: [EventsCategoriesComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {}
+export class HomeComponent {
+  categories: Category[] = [];
+  constructor(private apiService: ApiService) {
+    this.apiService.getCategories().subscribe((categories: Category[]) => {
+      this.categories = categories;
+    });
+  }
+}
