@@ -3,16 +3,17 @@
     <h2 class="text-xl mb-4">Categories you may like</h2>
     <a href="#" class="text-sm text-gray-400">View all</a>
   </div>
-  <div class="flex space-x-6 overflow-x-auto">
+  <div class="flex justify-between overflow-x-auto custom-scrollbar">
 
-    @for(category of categories(); track category.id) {
-    <div class="text-center">
-      <div class="w-20 h-20 bg-gray-700 rounded-full mb-2"></div>
+    @for(category of categories(); track category.id; let index = $index) {
+    @if(index < 10) { <div class="text-center">
+      <div class="w-28 h-28 bg-gray-700 rounded-full mb-2"></div>
       <p>{{category.name}}</p>
       <p class="text-sm text-gray-400">2.4M Followers</p>
-    </div>
-    } @empty {
-    <p>No categories available</p>
-    }
+  </div>
+  }
+  } @empty {
+  <p>No categories available</p>
+  }
   </div>
 </section>
