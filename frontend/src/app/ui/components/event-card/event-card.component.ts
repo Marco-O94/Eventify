@@ -9,5 +9,6 @@ import { Event } from '../../../interfaces';
 export class EventCardComponent {
   @Input() event?: Event;
   @Input() cardLayout: 'vertical' | 'horizontal' = 'vertical';
+  index: any;
   constructor() {}
 }
