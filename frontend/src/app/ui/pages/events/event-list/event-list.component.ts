@@ -27,7 +27,6 @@ export class EventListComponent {
   gridMode: 'grid' | 'list' = 'list';
   constructor(public api: ApiService) {
     this.$categories = this.api.getCategories();
-
     this.$events = this.api.getEvents(this.filters).pipe(
       switchMap((events) =>
         this.$categories.pipe(
@@ -43,7 +42,6 @@ export class EventListComponent {
       ),
       finalize(() => {
         this.isLoading = false; // Imposta isLoading su false una volta completato il caricamento
-        console.log(this.isLoading);
       })
     );
   }
