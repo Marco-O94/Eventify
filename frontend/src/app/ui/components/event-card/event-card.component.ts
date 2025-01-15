@@ -1,8 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { Event } from '../../../interfaces';
+import { IconComponent } from '../icon-component/icon.component';
 @Component({
   selector: 'app-event-card',
-  imports: [],
+  imports: [IconComponent],
   templateUrl: './event-card.component.html',
   styleUrl: './event-card.component.scss',
 })

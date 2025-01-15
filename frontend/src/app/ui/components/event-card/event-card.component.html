@@ -11,7 +11,9 @@
     <p>{{event?.abstract}}</p>
     <div class="card-actions justify-end">
       @for(category of event?.categories; track category?.id) {
-      <div class="badge badge-outline">{{category?.name }}</div>
+      <div class="badge badge-outline">
+        <Icon [icon]="category?.icon || 'home'" className="me-2" />{{category?.name }}
+      </div>
       }
     </div>
   </div>

@@ -30,7 +30,7 @@ export class EventListComponent {
             events.map((event) => ({
               ...event,
               categories: event.categories?.map((categoryId: unknown) =>
-                categories.find((c) => c.id === categoryId)
+                categories.find((c) => c.id == categoryId)
               ),
             }))
           )

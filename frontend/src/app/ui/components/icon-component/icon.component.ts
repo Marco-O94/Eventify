@@ -1,17 +1,15 @@
 import { Component, input } from '@angular/core';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import {
-  heroCalendarDaysSolid,
-  heroHomeSolid,
-  heroListBulletSolid,
-} from '@ng-icons/heroicons/solid';
-import {
   featherCalendar,
+  featherCode,
   featherGrid,
   featherHome,
   featherList,
+  featherMic,
 } from '@ng-icons/feather-icons';
 import { IconType } from '../../../types';
+import { heroLightBulbSolid } from '@ng-icons/heroicons/solid';
 
 @Component({
   selector: 'Icon',
@@ -22,6 +20,9 @@ import { IconType } from '../../../types';
       calendar: featherCalendar,
       list: featherList,
       grid: featherGrid,
+      code: featherCode,
+      mic: featherMic,
+      lightbulb: heroLightBulbSolid,
     }),
   ],
   templateUrl: './icon.component.html',
