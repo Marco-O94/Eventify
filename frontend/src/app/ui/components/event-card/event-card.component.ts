@@ -10,5 +10,6 @@ import { IconComponent } from '../icon-component/icon.component';
 export class EventCardComponent {
   @Input() event?: Event;
   @Input() cardLayout: 'vertical' | 'horizontal' = 'vertical';
+  index: any;
   constructor() {}
 }

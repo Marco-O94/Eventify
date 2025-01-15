@@ -4,14 +4,26 @@
     <app-grid-switcher [(gridMode)]="gridMode"></app-grid-switcher>
   </div>
   <div class="bg-base-content/10 mx-1 mt-4 mb-5 h-px"></div>
-  <div class="grid grid-cols-[repeat(4,minmax(100px,500px))] gap-3"
-    [className]="gridMode == 'grid' ? 'grid grid-cols-[repeat(4,minmax(100px,500px))] gap-3' : 'grid grid-cols-1 gap-3'">
+  @if(!isLoading) {
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
     @for(event of $events | async; track event.id) {
     <app-event-card [event]="event" [cardLayout]="gridMode == 'grid' ? 'vertical' : 'horizontal'" />
     } @empty {
-
+    <div class="flex justify-center items-center h-96">
+      <p class="text-lg text-base-content/50">Nessun evento trovato</p>
+    </div>
     }
-
   </div>
-
+  } @else {
+  <div className="flex flex-col gap-2">
+    <ngx-skeleton-loader count="1" appearance="line" animation="pulse"
+      [theme]="{height: '80px', width: '100%', background: ''}" />
+    <ngx-skeleton-loader count="1" appearance="line" animation="pulse"
+      [theme]="{height: '80px', width: '100%', background: ''}" />
+    <ngx-skeleton-loader count="1" appearance="line" animation="pulse"
+      [theme]="{height: '80px', width: '100%', background: ''}" />
+    <ngx-skeleton-loader count="1" appearance="line" animation="pulse"
+      [theme]="{height: '80px', width: '100%', background: ''}" />
+  </div>
+  }
 </div>
